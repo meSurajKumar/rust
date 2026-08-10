@@ -16,7 +16,7 @@
 // #[derive(Debug)] - yeh Rust ka built-in attribute hai
 // Isse struct ko println! me {:?} ya {:#?} format se print kar sakte hain
 // Bina iske struct directly print nahi hota (Debug trait implement nahi hoti)
-#[derive(Debug)]
+// Yeh attribute struct definition se theek pehle likhte hain (neeche dekho Topic 10)
 
 // ===========================================================
 // TOPIC 1: BASIC STRUCT DEFINITION AND INSTANTIATION
