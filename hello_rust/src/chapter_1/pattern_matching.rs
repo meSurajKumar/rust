@@ -51,7 +51,36 @@ fn main(){ // Main function yahan se shuru hota hai
 
     match age { // age variable par match expression lagaya
         Some(value) => println!("Value is {}", value), // Agar age mein kuch value hai, toh usko 'value' variable me daal do aur print karo
-        None => println!("No value is given!") // Agar age None hai, toh simply print karo ki value nahi di gayi
+        Nones => println!("No value is given!"), // Agar age None hai, toh simply print karo ki value nahi di gayi
+      
     }
 
 } // Main function ka end
+
+
+
+struct User {
+    name : String,
+    age : Option<i32>,
+    is_active : bool
+}
+
+fn main (){
+    let user = User{
+        name : String::from("Raju"),
+        age : Some(26),
+        is_active : true
+    };
+
+    match user {
+        User {name, age, is_active}=>{
+            println!("Name : {}", name);
+            println!("Age : {:?}", age);
+            println!("is_active : {}", is_active)
+        }
+        
+    }
+}
+
+
+
