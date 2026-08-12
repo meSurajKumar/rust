@@ -60,27 +60,41 @@ fn main(){ // Main function yahan se shuru hota hai
 
 
 struct User {
-    name : String,
+    name : Option<String>,
     age : Option<i32>,
-    is_active : bool
+    is_active : Option<bool>
 }
 
 fn main (){
     let user = User{
-        name : String::from("Raju"),
-        age : Some(26),
-        is_active : true
+        name : Some(String::from("Raju")),
+        age : Some(25),
+        is_active : Some(true)
     };
 
     match user {
+        
+        User {age:None,..}=>{
+            println!("Age not found!");
+        },
+        
+        User{name:None,..}=>{
+            println!("Name is not found!");
+        },
         User {name, age, is_active}=>{
-            println!("Name : {}", name);
+            println!("Name : {:?}", name);
             println!("Age : {:?}", age);
-            println!("is_active : {}", is_active)
-        }
+            println!("is_active : {:?}", is_active);
+        },
+        _ =>{
+            println!("Something went wrong!")
+        }       
         
     }
 }
+
+
+
 
 
 
