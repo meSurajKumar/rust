@@ -6,5 +6,5 @@ edition = "2024"
 [dependencies]
 
 [[bin]]
-name = "ownership"
-path = "src/chapter_1/ownership.rs"
+name = "pattern_matching"
+path = "src/chapter_1/pattern_matching.rs"
